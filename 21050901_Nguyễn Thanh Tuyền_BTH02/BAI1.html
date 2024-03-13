@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc nhất</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> <center>Giải phương trình bậc nhất</center></h1>
+        <form action="#">
+            <label for="he-so-a"> <center>Hệ số a:</center></label>
+            <input <center>type="number" id="he-so-a" name="a" placeholder="Nhập hệ số a"</center> >
+            <br>
+            <label for="he-so-b"> <center>Hệ số b:</center></label>
+            <input <center>type="number" id="he-so-b" name="b" placeholder="Nhập hệ số b"</center> >
+            <br>
+            <button type="submit"> <center>Giải phương trình</center></button>
+        </form>
+        <div id="ket-qua">
+            <h2><center>KẾT QUẢ</center></h2>
+      
+            <p> <center>Nghiệm: x =</center> </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const heSoA = document.getElementById('he-so-a');
+const heSoB = document.getElementById('he-so-b');
+const ketQua = document.getElementById('ket-qua');
+
+const giaiPhuongTrinh = () => {
+    const a = parseFloat(heSoA.value);
+    const b = parseFloat(heSoB.value);
+    
+    if (a === 0) {
+        if (b === 0) {
+            ketQua.innerHTML = `<h2>Kết quả</h2><p>Phương trình vô số nghiệm</p>`;
+        } else {
+            ketQua.innerHTML = `<h2>Kết quả</h2><p>Phương trình vô nghiệm</p>`;
+        }
+    } else {
+        const nghiem = -b / a;
+        ketQua.innerHTML = `<h2>Kết quả</h2><p>Nghiệm: x = ${nghiem.toFixed(1)}</p>`;
+    }
+};
+
+document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    giaiPhuongTrinh();
+});
+
+    </script>
+    
+</body>
+</html>

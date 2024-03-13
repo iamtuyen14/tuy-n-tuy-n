@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      
+    }
+
+    .header {
+      background-color: #f07ed7;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+    }
+
+    .tieu-de {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .thong-tin {
+      color: #333;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .thong-tin h2 {
+      margin-top: 0;
+    }
+
+    .thong-tin p {
+      margin: 0;
+    }
+
+    .thong-tin ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .thong-tin ul li {
+      margin-bottom: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .label-text {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-text {
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: 100%;
+    }
+
+    .textarea {
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: 100%;
+      height: 100px;
+    }
+
+    .nut-gui {
+      background-color: #f568df;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .nut-gui:hover {
+      background-color: #333;
+    }
+
+    .error-message {
+      color: rgb(229, 244, 25);
+      display: none;
+    }
+
+    #success-message {
+      color: rgb(242, 82, 80);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="tieu-de">LIÊN HỆ</h1>
+    </div>
+    <div class="thong-tin">
+      <h2>THÔNG TIN</h2>
+      <p>114/7, Dương Quảng Hàm, Phường 5, Quận Gò Vấp, TP HCM</p>
+      
+      <p>iamtuyen142003@gmail.com</p>
+      <p>+84 949 006 089</p>
+      </ul>
+    </div>
+    <form action="action_page.php" method="post" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label class="label-text" for="fname">Họ và tên:</label>
+        <input type="text" id="fname" name="fname" class="input-text" placeholder="Nhập họ và tên">
+        <span class="error-message" id="fname-error"></span>
+      </div>
+      <div class="form-group">
+        <label class="label-text" for="email">Địa chỉ e-mail:</label>
+        <input type="email" id="email" name="email" class="input-text" placeholder="Nhập địa chỉ email">
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="subject">Tiêu đề bài viết:</label>
+                <input type="text" id="subject" name="subject" class="input-text" placeholder="Nhập tiêu đề">
+                <span class="error-message" id="subject-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Nội dung cần gửi:</label>
+                <textarea id="message" name="message" rows="5" cols="30" class="input-text" placeholder="Nhập nội dung"></textarea>
+                <span class="error-message" id="message-error"></span>
+            </div>
+            <button type="submit" class="nut-gui">Gửi tin nhắn</button>
+        </form>
+        <div id="success-message"></div>
+    </div>
+</body>
+</html>

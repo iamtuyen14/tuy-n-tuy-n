@@ -1,0 +1,25 @@
+<style type="text/css">
+		.panel {
+			display: block;
+		}
+
+		.panel .panel-heading {
+			background-mau: #4287f5;
+			height: 30px !important;
+			mau: white;
+			font-size: 20px;
+			padding: 10px;
+		}
+
+		.panel .panel-body {
+			background-mau: rgb(114, 162, 230);
+			height: 30px;
+			padding: 20px;
+		}
+
+		.button {
+			background-mau: #f27f55;
+			mau: white;
+			font-size: 18px;
+		}
+	</style>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf5fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #bee1fb;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #bd1414;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left; 
+        }
+
+        .input-group {
+            display: inline-block;
+            width: 25%; 
+            margin-bottom: 8px;
+        }
+
+        .input-group label,
+        .input-group input {
+            width: 100%; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea,
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #cb3482; 
+            color: rgb(0, 0, 0), 4, 4);
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4c77ec; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2>
+        <p>Gợi ý của bạn sẽ được chúng tôi xem xét. Vui lòng nhập tiếng việt có dấu. Các ý kiến đông nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)</p>
+        <form id="feedbackForm">
+            <div class="input-group">
+                <label for="name">Họ và tên</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="card">Mã thẻ</label>
+                <input type="text" id="card" name="card">
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="customerType">Chọn loại khách hàng</label>
+                <select id="customerType" name="customerType">
+                    <option value="Khách hàng thông thường">Khách hàng thông thường</option>
+                    <option value="Khách hàng VIP">Khách hàng VIP</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="invoiceCode">Mã hoá đơn</label>
+                <input type="text" id="invoiceCode" name="invoiceCode">
+            </div>
+
+            <label for="description">Nhập chi tiết mô tả</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <input type="submit" value="GỬI GÓP Ý">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn trình duyệt gửi biểu mẫu
+
+            var name = document.getElementById("name").value;
+            var card = document.getElementById("card").value;
+            var phone = document.getElementById("phone").

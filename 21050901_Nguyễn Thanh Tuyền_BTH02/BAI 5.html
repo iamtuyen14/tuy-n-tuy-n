@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 5</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: rgba(83, 159, 199, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(142, 174, 228, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(88, 119, 175, 0.2);
+      color: white;
+    }
+    .column {
+      float: left;
+      padding: 10px;
+    }
+
+
+    .column.left {
+      width: 50%;
+    }
+
+    .column.right {
+      width: 50%;
+    }
+
+    .login-btn {
+      background-color: #23bc91;
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-items: center;
+    }
+
+    .login-btn:hover {
+      background-color: #19813e;
+    }
+  </style>
+</head>
+
+<body >
+  <div class="login-container">
+    <h3>LOGIN</h3>
+    <div class="column right">
+        <input type="text" id="username" placeholder="username" value="Ben Tre">
+        <input type="password" id="password" placeholder="password">
+    </div>
+        <div class="column left"><button class="login-btn" onclick="login()">LOG - IN</button>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+           
+            console.log('username: ' + username);
+            console.log('password: ' + password);
+            
+           
+            alert('username: ' + username + '\npassword: ' + password);
+        }
+    </script>
+
+</body>
+
+</html>
