@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hệ thống đánh giá</title>
+  <link rel="stylesheet" href="danh gia.css">
+</head>
+<body>
+  <h1>Đánh giá sản phẩm</h1>
+  <form action="/submit-review" method="post">
+    <label for="product">Tên sản phẩm:</label>
+    <input type="text" id="product" name="product">
+    <br>
+    <label for="rating">Điểm đánh giá:</label>
+    <select id="rating" name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <br>
+    <label for="review">Nội dung đánh giá:</label>
+    <textarea id="review" name="review"></textarea>
+    <br>
+    <button type="submit">Gửi đánh giá</button>
+  </form>
+  <script src="b3.js"></script>
+</body>
+</html>
